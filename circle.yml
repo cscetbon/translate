@@ -1,12 +1,11 @@
 general:
     artifacts:
         - coverage.xml
+dependencies:
+    pre:
+       -  pip install pytest six jsonschema keyring pyxdg mock testscenarios testresources babel pytest-cov
 test:
     override:
         - py.test translate --cov translate --cov-report html
     post:
         - cp -R htmlcov $CIRCLE_ARTIFACTS
-
-dependencies:
-    pre:
-       -  pip install pytest six jsonschema keyring pyxdg mock testscenarios testresources babel pytest-cov
