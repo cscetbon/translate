@@ -4,6 +4,9 @@ general:
 test:
     override:
         - py.test translate --cov translate --cov-report html
+    post:
+        - cp htmlcov $CIRCLE_ARTIFACTS
+
 dependencies:
     pre:
        -  pip install pytest six jsonschema keyring pyxdg mock testscenarios testresources babel pytest-cov
