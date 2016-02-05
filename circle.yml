@@ -3,7 +3,7 @@ general:
         - coverage.xml
 test:
     override:
-        - py.test translate --cov translate --cov-report xml
+        - py.test translate --cov translate --cov-report html
 dependencies:
     pre:
        -  pip install pytest six jsonschema keyring pyxdg mock testscenarios testresources babel pytest-cov
