@@ -4,3 +4,6 @@ general:
 test:
     override:
         - py.test --cov translate --cov-report xml
+dependencies:
+    pre:
+       -  pip install pytest six jsonschema keyring pyxdg mock testscenarios testresources babel
