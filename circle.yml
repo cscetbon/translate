@@ -1,0 +1,6 @@
+general:
+    artifacts:
+        - coverage.xml
+test:
+    override:
+        - py.test --cov translate --cov-report xml
