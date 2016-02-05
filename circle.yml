@@ -5,7 +5,7 @@ test:
     override:
         - py.test translate --cov translate --cov-report html
     post:
-        - cp htmlcov $CIRCLE_ARTIFACTS
+        - cp -R htmlcov $CIRCLE_ARTIFACTS
 
 dependencies:
     pre:
